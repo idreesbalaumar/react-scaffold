@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useAuth } from "@/hooks/useAuth.hook";
 import { ROUTES } from "@/routes";
 import { PropsWithChildren, useLayoutEffect, useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth.hook";
 
 type Props = PropsWithChildren;
 

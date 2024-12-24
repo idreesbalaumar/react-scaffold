@@ -6,6 +6,7 @@ import App from './App.tsx';
 import ErrorHandler from './helpers/error.helper.ts';
 import './index.css';
 import { persistor, store } from './redux-store/index.ts';
+import { setIsDarkMode } from './redux-store/slices/themeSlice.ts';
 
 const queryClient = new QueryClient({
   queryCache: new QueryCache({
@@ -16,6 +17,10 @@ const queryClient = new QueryClient({
     onError: (error: Error) => ErrorHandler.parser(error)
   })
 });
+
+const savedTheme = localStorage.getItem("isDarkMode") === "true";
+store.dispatch(setIsDarkMode(savedTheme)); // Ensure Redux initializes with the correct theme state
+document.documentElement.classList.toggle("dark", savedTheme); // Apply the theme class globally
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <QueryClientProvider client={queryClient}>

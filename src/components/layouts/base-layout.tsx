@@ -1,18 +1,13 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
 
-type Props = {}
-
-const BaseLayout = (props: Props) => {
+const BaseLayout = () => {
   return (
-    <div>
-       <aside>side bar</aside>
-        <section className='overflow-auto' >
-        <Outlet/>
-        </section>
-        
-    </div>
-  )
-}
+    <>
+      <main className="min-h-screen flex flex-col">
+        <Outlet />
+      </main>
+    </>
+  );
+};
 
-export default BaseLayout
+export default BaseLayout;

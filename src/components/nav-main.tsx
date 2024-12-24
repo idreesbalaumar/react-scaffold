@@ -40,7 +40,7 @@ export function NavMain({
         {items.map((item) => (
           <Collapsible key={item.title} asChild defaultOpen={item.isActive}>
             <SidebarMenuItem>
-              <SidebarMenuButton className="dark:hover:bg-[#030712]" asChild tooltip={item.title}>
+              <SidebarMenuButton className="dark:hover:bg-[#030712] transition ease-in-out delay-50 duration-300 hover:shadow-md hover:scale-100" asChild tooltip={item.title}>
                 <a href={item.url}>
                   <item.icon />
                   <span>{item.title}</span>
@@ -49,7 +49,7 @@ export function NavMain({
               {item.items?.length ? (
                 <>
                   <CollapsibleTrigger asChild>
-                    <SidebarMenuAction className="data-[state=open]:rotate-90 dark:hover:bg-[#030712]">
+                    <SidebarMenuAction className="data-[state=open]:rotate-90 dark:hover:bg-[#030712] transition ease-in-out delay-50 duration-300 hover:shadow-md hover:-translate-y-1 hover:scale-100">
                       <ChevronRight />
                       <span className="sr-only">Toggle</span>
                     </SidebarMenuAction>
@@ -58,7 +58,7 @@ export function NavMain({
                     <SidebarMenuSub>
                       {item.items?.map((subItem) => (
                         <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton className="dark:hover:bg-[#030712]" asChild>
+                          <SidebarMenuSubButton className="dark:hover:bg-[#030712] transition ease-in-out delay-50 duration-300 hover:shadow-md hover:-translate-y-1 hover:scale-100" asChild>
                             <a href={subItem.url}>
                               <span>{subItem.title}</span>
                             </a>

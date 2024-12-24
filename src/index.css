@@ -90,8 +90,9 @@
   }
   .dark {
     /* Dark mode gradients */
+    /* --gradient-from: #05372c; */
     --gradient-from: #1a202c; /* Darker green for dark mode */
-    --gradient-to: #2f855a;   /* Brighter green for dark mode */
+    --gradient-to: #1a202c00;   /* Brighter green for dark mode */
     
     --background: 224 71.4% 4.1%;
 

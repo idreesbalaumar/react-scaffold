@@ -152,11 +152,11 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar variant="inset" {...props}>
+    <Sidebar collapsible="icon" variant="inset" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton className="dark:hover:bg-[#030712]" size="lg" asChild>
+            <SidebarMenuButton className="dark:hover:bg-[#030712] transition ease-in-out delay-50 duration-300 hover:shadow-md hover:-translate-y-1 hover:scale-100" size="lg" asChild>
               <a href="#">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground dark:bg-[#ffffff]">
                   <Command className="size-4 dark:text-[#000000]" />

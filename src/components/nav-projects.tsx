@@ -40,7 +40,7 @@ export function NavProjects({
       <SidebarMenu>
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton className="dark:hover:bg-[#030712]" asChild>
+            <SidebarMenuButton className="dark:hover:bg-[#030712] transition ease-in-out delay-50 duration-300 hover:shadow-md hover:scale-100" asChild>
               <a href={item.url}>
                 <item.icon />
                 <span>{item.name}</span>
@@ -48,7 +48,7 @@ export function NavProjects({
             </SidebarMenuButton>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuAction className="dark:hover:bg-[#030712]">
+                <SidebarMenuAction className="dark:hover:bg-[#030712] transition ease-in-out delay-50 duration-300 hover:shadow-md hover:scale-100">
                   <MoreHorizontal />
                   <span className="sr-only">More</span>
                 </SidebarMenuAction>
@@ -76,7 +76,7 @@ export function NavProjects({
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="dark:hover:bg-[#030712]">
+          <SidebarMenuButton className="dark:hover:bg-[#030712] transition ease-in-out delay-50 duration-300 hover:shadow-md hover:scale-100">
             <MoreHorizontal />
             <span>More</span>
           </SidebarMenuButton>

@@ -18,12 +18,14 @@ import { KEYS } from "@/helpers/constants.helper";
 import authReducer from "./slices/auth.slice";
 import profileReducer from "./slices/profileSlices";
 import paymentFormReducer from "./slices/paymentFormSlice";
+import themeReducer from './slices/themeSlice';
 
 // Define RootState type
 const rootReducer = combineReducers({
   authStore: authReducer,
   profileStore: profileReducer,
   paymentFormSlice: paymentFormReducer,
+  themeStore: themeReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
@@ -35,6 +37,7 @@ const persistConfig = {
     "authStore",
     "profileStore",
     "paymentFormSlice",
+    "themeStore",
   ], // Ensure this matches your slice names
 };
 
